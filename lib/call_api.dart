@@ -11,6 +11,17 @@ class CallApi {
     return await receivePort.first;
   }
 
+  static Future<List<dynamic>> fetchTopArtists() async {
+    final response =
+        await http.get(Uri.parse('https://api.deezer.com/chart/0/artists'));
+    if (response.statusCode == 200) {
+      final data = json.decode(response.body);
+      return data['data'];
+    } else {
+      throw Exception('Failed to load top artists');
+    }
+  }
+
   static void _callDeezerApi(List<dynamic> args) async {
     SendPort sp = args[0];
     String artistName = args[1];
@@ -25,7 +36,6 @@ class CallApi {
         final artistId = searchData['data'][0]['artist']['id'];
         final topSongsUrl =
             'https://api.deezer.com/artist/$artistId/top?limit=$limit';
-        print('URL das top músicas: $topSongsUrl');
         final topSongsResponse = await http.get(Uri.parse(topSongsUrl));
 
         if (topSongsResponse.statusCode == 200) {
