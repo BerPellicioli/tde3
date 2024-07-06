@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "23568909808",
+    "project_id": "tde3-notify",
+    "storage_bucket": "tde3-notify.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:23568909808:android:10538f8b560eda5d4e8935",
+        "android_client_info": {
+          "package_name": "com.example.tde3"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBDtX7AG4YvlGWjLqffqoLWu4aP-EGXCZ4"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:23568909808:android:aadfdd89d9aa3b2f4e8935",
+        "android_client_info": {
+          "package_name": "com.example.tde3_notify"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBDtX7AG4YvlGWjLqffqoLWu4aP-EGXCZ4"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
